@@ -1,0 +1,59 @@
+.Header {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo__area a img {
+    width: 80px;
+}
+
+.header__nav__area ul li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.header__nav__area ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+    padding: 0 20px;
+    font-weight: 500;
+    transition: .4s;
+}
+
+.header__user__area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user__login {
+    margin-right: 10px;
+}
+
+.user__login a {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+    padding: 0 10px;
+    font-weight: 500;
+    transition: .4s;
+}
+
+.user__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -23px;
+}
+
+.user__name p {
+    font-size: 13px;
+    color: #7d7d7d;
+}
