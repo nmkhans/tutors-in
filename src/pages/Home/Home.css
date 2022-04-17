@@ -91,3 +91,60 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+.intro__area {
+    padding: 0 0 40px 0;
+}
+
+.intro__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro__left__img img {
+    width: 500px;
+}
+
+.intro__right__desc h2 {
+    color: #111;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+
+.intro__right__desc h3 {
+    color: #54647b;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.intro__right__desc p {
+    width: 600px;
+    color: #505050;
+    font-size: 15px;
+    line-height: 27px;
+    text-align: justify;
+}
+
+.intro__right__desc > button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: #21a7d0;
+    color: #fff;
+    height: 50px;
+    width: 160px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.intro__right__desc > button:hover {
+    background: #1e95ba;
+    color: #fff;
+}
