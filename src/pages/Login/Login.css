@@ -1,14 +1,12 @@
 .Login {
     height: calc(100vh - 86px);
+    padding: 100px 0;
     background: #f3fafc;
     position: relative;
 }
 
 .login__form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
     border: 1px solid #21a7d0;
     border-radius: 8px;
     background: #fff;
@@ -46,6 +44,21 @@
     display: inline-block;
     font-size: 15px;
     margin-bottom: 5px;
+}
+
+.form__text {
+    display: flex;
+    justify-content: center;
+}
+
+.form__text button {
+    border: none;
+    outline: none;
+    background: none;
+    color: #1e95ba;
+    margin-left: 5px;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 .form__submit__btn  {

@@ -3,8 +3,11 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 import logo from './logo.png';
 import LinkTo from './../LinkTo/LinkTo';
+import useFirebase from '../../hooks/useFirebase';
 
 const Header = () => {
+    const { user, handleSignOut } = useFirebase();
+    console.log(user)
     return (
         <div className="Header">
             <div className="inner__header container">
@@ -23,16 +26,18 @@ const Header = () => {
                         </ul>
                     </nav>
                     <div className="header__profile">
-                        <div className="profine__info">
-                            <div className="profile__avater">
-                                <img src="https://i.ibb.co/12fC5JT/client-4.jpg" alt="" />
+                        {user?.uid && (
+                            <div className="profine__info">
+                                <div className="profile__avater">
+                                    <img src={user?.photoURL} alt="" />
+                                </div>
+                                <div className="profile__name">
+                                    <p>{user?.displayName}</p>
+                                </div>
                             </div>
-                            <div className="profile__name">
-                                <p>Moin Khan</p>
-                            </div>
-                        </div>
+                        )}
                         <div className="account">
-                            <Link to="/login">Login</Link>
+                            {user?.uid ? <button onClick={handleSignOut}>Sign Out</button> : <Link to="/login">Login</Link>}
                         </div>
                     </div>
 

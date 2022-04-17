@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 import './Login.css';
 import useFirebase from './../../hooks/useFirebase';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
-    const { loginUser, user } = useFirebase();
+    const { loginUser } = useFirebase();
+    const navigate = useNavigate();
 
     // Handle Form 
     const handleForm = (event) => {
@@ -32,6 +34,10 @@ const Login = () => {
                             <div className="input__group">
                                 <label htmlFor="password">Password</label>
                                 <input ref={passwordRef} type="password" name="password" id="password" />
+                            </div>
+                            <div className="form__text">
+                                <p>New Here?</p>
+                                <button onClick={() => navigate('/register')}>Register</button>
                             </div>
                             <div className="form__submit__btn">
                                 <input type="submit" value="Login" />

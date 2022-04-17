@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signOut } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
@@ -16,11 +16,15 @@ const useFirebase = () => {
 
 
     //? Create new user with Email and Password
-    const createUser = (email, password) => {
+    const createUser = (name, img, email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
         .then(userCredential => {
             const user = userCredential.user;
             setUser(user);
+            updateProfile(auth.currentUser, {
+            displayName: `${name}`,
+            photoURL: `${img}`
+        })
             navigate('/');
         })
     }
@@ -35,9 +39,15 @@ const useFirebase = () => {
         })
     }
 
+    //? Sign Out User
+    const handleSignOut = () => [
+        signOut(auth)
+    ]
+
     return {
         createUser,
         loginUser,
+        handleSignOut,
         user
     }
 }
