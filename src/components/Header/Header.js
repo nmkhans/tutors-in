@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import logo from './logo.png';
+import LinkTo from './../LinkTo/LinkTo';
 
 const Header = () => {
     return (
@@ -15,10 +16,10 @@ const Header = () => {
                     </div>
                     <nav className="header__nav">
                         <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/services">Service</Link></li>
-                            <li><Link to="/about">About</Link></li>
-                            <li><Link to="/checkout">Checkout</Link></li>
+                            <li><LinkTo to="/">Home</LinkTo></li>
+                            <li><LinkTo to="/services">Service</LinkTo></li>
+                            <li><LinkTo to="/about">About</LinkTo></li>
+                            <li><LinkTo to="/checkout">Checkout</LinkTo></li>
                         </ul>
                     </nav>
                     <div className="header__profile">
