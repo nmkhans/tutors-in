@@ -1,6 +1,7 @@
 .Header {
     padding: 5px;
     border-bottom: 1px solid #ddd;
+    background: #fff;
 }
 
 .header__content {
