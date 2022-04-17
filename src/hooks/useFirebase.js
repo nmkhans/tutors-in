@@ -1,11 +1,13 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signOut } from 'firebase/auth';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import auth from '../firebase.init';
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
 
     //? hook state Observer
     useEffect(() => {
@@ -25,7 +27,7 @@ const useFirebase = () => {
             displayName: `${name}`,
             photoURL: `${img}`
         })
-            navigate('/');
+            navigate(from, {replace: true});
         })
     }
 
@@ -35,7 +37,7 @@ const useFirebase = () => {
         .then(userCredential => {
             const user = userCredential.user;
             setUser(user);
-            navigate('/');
+            navigate(from, {replace: true});
         })
     }
 

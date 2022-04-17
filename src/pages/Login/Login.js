@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './Login.css';
 import useFirebase from './../../hooks/useFirebase';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 const Login = () => {
     const emailRef = useRef('');
