@@ -1,4 +1,8 @@
 .hero__area {
+    background: #f3fafc;
+}
+
+.hero__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,4 +48,46 @@
 .hero__left__text > button:hover {
     background: #1e95ba;
     color: #fff;
+}
+
+.package__area {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.package__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.packages {
+    text-align: center;
+    background: #f3fafc;
+    padding: 30px 10px;
+}
+
+.package__title h4 {
+    color: #111;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.package__desc p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #505050;
+    margin-bottom: 15px;
+}
+
+.package__button button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
 }
