@@ -1,0 +1,70 @@
+.Header {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 80px;
+}
+
+.header__nav ul li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.header__nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header__profile {
+    display: flex;
+    align-items: center;
+}
+
+.profine__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__avater {
+    border: 2px solid #21a7d0;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    padding: 3px;
+    text-align: center;
+}
+
+.profile__avater > img {
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile__name > p {
+    font-size: 13px;
+    color: #7d7d7d;
+}
+
+.account {
+    margin-left: 10px;
+}
+
+.account a {
+    display: inline-block;
+    text-decoration: none;
+}
