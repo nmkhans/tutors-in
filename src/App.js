@@ -8,6 +8,8 @@ import Login from './pages/Login/Login';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Checkout from './pages/Checkout/Checkout';
 import NotFound from './pages/NotFound/NotFound';
+import Blog from './pages/Blog/Blog';
+import About from './pages/About/About';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/about" element={<About />} />
         <Route path="/checkout/:serviceId" element={<RequireAuth>
           <Checkout />
         </RequireAuth>} />

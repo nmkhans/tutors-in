@@ -20,6 +20,7 @@ const Header = () => {
                         <ul>
                             <li><LinkTo to="/">Home</LinkTo></li>
                             <li><LinkTo to="/about">About</LinkTo></li>
+                            <li><LinkTo to="/services">Services</LinkTo></li>
                             <li><LinkTo to="/blog">Blog</LinkTo></li>
                         </ul>
                     </nav>
