@@ -51,7 +51,7 @@
 
 .profile__avater > img {
     width: 40px;
-    height: auto;
+    height: 40px;
     object-fit: cover;
     border-radius: 50%;
 }

@@ -7,7 +7,6 @@ import useFirebase from '../../hooks/useFirebase';
 
 const Header = () => {
     const { user, handleSignOut } = useFirebase();
-    console.log(user)
     return (
         <div className="Header">
             <div className="inner__header container">
