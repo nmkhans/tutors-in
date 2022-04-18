@@ -2,11 +2,13 @@ import React, { useRef } from 'react';
 import './Login.css';
 import useFirebase from './../../hooks/useFirebase';
 import { useNavigate} from 'react-router-dom';
+import {FcGoogle} from 'react-icons/fc';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const { loginUser } = useFirebase();
+    const {signinUserGoogle} = useFirebase();
     const navigate = useNavigate();
 
     // Handle Form 
@@ -29,11 +31,11 @@ const Login = () => {
                         <div className="form__group">
                             <div className="input__group">
                                 <label htmlFor="email">Email</label>
-                                <input ref={emailRef} type="email" name="email" id="email" />
+                                <input ref={emailRef} type="email" name="email" id="email" required />
                             </div>
                             <div className="input__group">
                                 <label htmlFor="password">Password</label>
-                                <input ref={passwordRef} type="password" name="password" id="password" />
+                                <input ref={passwordRef} type="password" name="password" id="password" required />
                             </div>
                             <div className="form__text">
                                 <p>New Here?</p>
@@ -41,6 +43,14 @@ const Login = () => {
                             </div>
                             <div className="form__submit__btn">
                                 <input type="submit" value="Login" />
+                            </div>
+                            <div className="form__google__signin">
+                                <div className="google__signin__title">
+                                    <h3>or</h3>
+                                </div>
+                                <div className="google__signin">
+                                    <button onClick={signinUserGoogle}>Continue with google <span><FcGoogle /></span></button>
+                                </div>
                             </div>
                         </div>
                     </form>

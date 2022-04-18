@@ -19,9 +19,8 @@ const Header = () => {
                     <nav className="header__nav">
                         <ul>
                             <li><LinkTo to="/">Home</LinkTo></li>
-                            <li><LinkTo to="/services">Service</LinkTo></li>
                             <li><LinkTo to="/about">About</LinkTo></li>
-                            <li><LinkTo to="/checkout">Checkout</LinkTo></li>
+                            <li><LinkTo to="/blog">Blog</LinkTo></li>
                         </ul>
                     </nav>
                     <div className="header__profile">
