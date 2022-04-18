@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Learning guide and study management.",
+        "category": "regular",
+        "img": "https://i.ibb.co/ZHbT1b3/guide.jpg",
+        "rating": 5,
+        "enrolled": 750,
+        "price": 150
+    },
+    {
+        "id": 2,
+        "name": "Group learning and manage study with hacks.",
+        "category": "pro",
+        "img": "https://i.ibb.co/D1n8WfZ/group.jpg",
+        "rating": 5,
+        "enrolled": 980,
+        "price": 350
+    },
+    {
+        "id": 3,
+        "name": "Online Personalized Learning Programme.",
+        "category": "elite",
+        "img": "https://i.ibb.co/P4cvhhF/personal.jpg",
+        "rating": 5,
+        "enrolled": 1220,
+        "price": 550
+    }
+]

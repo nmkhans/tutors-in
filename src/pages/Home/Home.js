@@ -1,7 +1,11 @@
 import React from 'react';
+import Service from '../../components/Service/Service';
+import { useService } from '../../hooks/useData';
 import './Home.css';
 
 const Home = () => {
+    const {services} = useService();
+
     return (
         <div className="Home">
             <div className="inner__home">
@@ -80,6 +84,19 @@ const Home = () => {
                                     <p>I am a professional and passionated Home Tutor who can make your study easier and enjoyable in an effective and innovative way. I am here to help you out with your study and make you improve your self day by day without even any boaringness. You can let me take care of your study and make you improve. I can teach you personally and in a customizable study program according to your requirement. You can have me to guide you to the right path way toward your success. So without any further grab one package and start with me today.</p>
                                     <button>Choose a Plan</button>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="services__area">
+                        <div className="inner__services__area container">
+                            <div className="services__title">
+                                <h2>My Services</h2>
+                                <h3>My Providing service courses</h3>
+                            </div>
+                            <div className="services__content">
+                                {
+                                    services.map(service => <Service key={service.id} service={service} />)
+                                }
                             </div>
                         </div>
                     </div>
