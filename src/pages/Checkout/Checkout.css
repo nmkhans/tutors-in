@@ -1,0 +1,116 @@
+.Checkout {
+    padding: 50px 0;
+}
+
+.checkout__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.checkout__form__title h2 {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.checkout__form {
+    background: #fff;
+    width: 600px;
+}
+
+.input__group {
+    margin-bottom: 15px;
+}
+
+.input__group input,
+.input__group textarea{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #1e95ba;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.input__group textarea {
+    height: 200px;
+    resize: none;
+}
+
+.input__group label {
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.checkout__submit button {
+    border: none;
+    outline: none;
+    background: #21a7d0;
+    color: #fff;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkoutProduct__content {
+    border: 1px solid #dfe9eb;
+    border-radius: 5px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.checkoutProduct__img {
+    border-bottom: 1px solid #dfe9eb;
+}
+
+.checkoutProduct__img img {
+    border-radius: 5px;
+}
+
+.checkoutProduct__description {
+    padding: 20px;
+}
+
+.checkoutProduct__tag h4 {
+    color: #485973;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.checkoutProduct__name h2 {
+    color: #111;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.checkoutProduct__price p {
+    color: #21a7d0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.checkoutProduct__info {
+    display: flex;
+    margin-top: 10px;
+}
+
+.checkoutProduct__rating {
+    margin-right: 20px;
+}
+
+.checkoutProduct__rating p span {
+    color: #fcb903;
+    font-size: 16px;
+}
+
+.checkoutProduct__enrolled p {
+    color: #5d5d5d;
+}

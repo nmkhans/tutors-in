@@ -2,10 +2,15 @@ import React from 'react';
 import './Service.css';
 import { AiFillStar, AiOutlineArrowRight } from 'react-icons/ai';
 import { FaUser } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Service = ({service}) => {
-    console.log(service);
-    const {name, img, category, enrolled, price, rating } = service;
+    const {name, img, category, enrolled, price, rating, id } = service;
+    const navigate = useNavigate();
+
+    const toCheckOut = (id) => {
+        navigate(`/checkout/${id}`);
+    }
 
     return (
         <div className="Service">
@@ -30,7 +35,7 @@ const Service = ({service}) => {
                         <p><span><AiFillStar/></span> <span><AiFillStar/></span> <span><AiFillStar/></span> <span><AiFillStar/></span> <span><AiFillStar/></span> {rating}</p>
                     </div>
                     <div className="service__button">
-                        <button>Purchase <span><AiOutlineArrowRight/></span></button>
+                        <button onClick={() => toCheckOut(id)}>Purchase <span><AiOutlineArrowRight/></span></button>
                     </div>
                 </div>
             </div>
