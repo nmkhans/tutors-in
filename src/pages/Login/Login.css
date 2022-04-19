@@ -115,3 +115,15 @@
     color: #ff0000;
     margin-top: 5px;
 }
+
+.pass_reset {
+    text-align: center;
+}
+
+.pass_reset button {
+    border: none;
+    outline: none;
+    background: none;
+    font-size:15px;
+    color: #1e95ba;
+}

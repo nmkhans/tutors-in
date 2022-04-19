@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signOut, GoogleAuthProvider, signInWithPopup, sendEmailVerification } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signOut, GoogleAuthProvider, signInWithPopup, sendEmailVerification, sendPasswordResetEmail } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import auth from '../firebase.init';
@@ -60,15 +60,24 @@ const useFirebase = () => {
     }
 
     //? Sign Out User
-    const handleSignOut = () => [
+    const handleSignOut = () => {
         signOut(auth)
-    ]
+    }
+
+    //? Reset Password
+    const resetPasswordOfUser = (email, toast) => {
+        sendPasswordResetEmail(auth, email)
+        .then(() => {
+            toast('Reset Mail Send');
+        })
+    }
 
     return {
         createUser,
         signinUserGoogle,
         loginUser,
         handleSignOut,
+        resetPasswordOfUser,
         user,
     }
 }
