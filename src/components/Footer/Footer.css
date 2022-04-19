@@ -30,3 +30,17 @@
     color: #fff;
     cursor: pointer;
 }
+
+/* ================ Responsive ============== */
+
+/* Medium Tablet */
+
+@media all and (min-width: 200px) and (max-width: 768px) {
+    .footer__content {
+        flex-direction: column;
+    }
+
+    .foter__copyright {
+        margin: 15px 0;
+    }
+}
