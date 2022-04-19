@@ -1,0 +1,32 @@
+.Footer {
+    padding: 10px 0;
+    background: #21a7d0;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.foter__logo img {
+    width: 90px;
+}
+
+.foter__copyright p {
+    color: #fff;
+    font: 18px;
+}
+
+.foter__social ul li {
+    display: inline-block;
+    margin: -4px;
+}
+
+.foter__social ul li span {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}

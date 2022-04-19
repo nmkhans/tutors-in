@@ -10,6 +10,7 @@ import Checkout from './pages/Checkout/Checkout';
 import NotFound from './pages/NotFound/NotFound';
 import Blog from './pages/Blog/Blog';
 import About from './pages/About/About';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
