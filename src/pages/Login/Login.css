@@ -1,6 +1,6 @@
 .Login {
-    height: calc(100vh - 86px);
-    padding: 100px 0;
+    /* height: calc(100vh - 86px); */
+    padding: 50px 0;
     background: #f3fafc;
     position: relative;
 }

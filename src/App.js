@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Register from './pages/Register/Register';
@@ -13,6 +13,17 @@ import About from './pages/About/About';
 import Footer from './components/Footer/Footer';
 
 function App() {
+  const location = useLocation();
+  const [checkLocation, setCheckLocation] = useState(true);
+  useEffect(() => {
+    if (location.pathname === '/login' || location.pathname === '/register') {
+      setCheckLocation(false);
+    } else {
+      setCheckLocation(true);
+    }
+  }, [location.pathname])
+
+
   return (
     <div className="App">
       <Header />
@@ -27,7 +38,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
+      {checkLocation && (
+        <Footer />
+      )}
     </div>
   );
 }
