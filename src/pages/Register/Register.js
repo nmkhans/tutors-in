@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import './Register.css';
 import useFirebase from './../../hooks/useFirebase';
+import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import {FcGoogle} from 'react-icons/fc';
 
@@ -23,7 +24,7 @@ const Register = () => {
         const password = passwordRef.current.value;
         const confirmPassword = confirmPasswordRef.current.value;
         if(password === confirmPassword) {
-            createUser(name, img, email, password);
+            createUser(name, img, email, password, toast.info);
         }
     }
 
@@ -38,23 +39,23 @@ const Register = () => {
                         <div className="form__group">
                             <div className="input__group">
                                 <label htmlFor="name">Name</label>
-                                <input ref={nameRef} type="text" name="name" id="name" required />
+                                <input ref={nameRef} type="text" name="name" id="name" required placeholder="Enter Name" />
                             </div>
                             <div className="input__group">
                                 <label htmlFor="image">Image</label>
-                                <input ref={imgRef} type="text" name="image" id="image" required />
+                                <input ref={imgRef} type="text" name="image" id="image" placeholder="Enter live image url" />
                             </div>
                             <div className="input__group">
                                 <label htmlFor="email">Email</label>
-                                <input ref={emailRef} type="email" name="email" id="email" required />
+                                <input ref={emailRef} type="email" name="email" id="email" required placeholder="Enter Email" />
                             </div>
                             <div className="input__group">
                                 <label htmlFor="password">Password</label>
-                                <input ref={passwordRef} type="password" name="password" id="password" required />
+                                <input ref={passwordRef} type="password" name="password" id="password" required placeholder="Enter Password" />
                             </div>
                             <div className="input__group">
                                 <label htmlFor="confirm-password">Confirm Password</label>
-                                <input ref={confirmPasswordRef} type="password" name="password" id="confirm-password" required />
+                                <input ref={confirmPasswordRef} type="password" name="password" id="confirm-password" required placeholder="Confirm Password" />
                             </div>
                             <div className="form__text">
                                 <p>Already Have an Account?</p>

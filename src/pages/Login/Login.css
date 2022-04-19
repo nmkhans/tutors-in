@@ -109,3 +109,9 @@
     cursor: pointer;
     transition: .5s;
 }
+
+.form__error {
+    text-align: center;
+    color: #ff0000;
+    margin-top: 5px;
+}

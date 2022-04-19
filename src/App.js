@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Register from './pages/Register/Register';
@@ -43,6 +45,7 @@ function App() {
       {checkLocation && (
         <Footer />
       )}
+      <ToastContainer/>
     </div>
   );
 }

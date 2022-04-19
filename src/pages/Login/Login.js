@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './Login.css';
 import useFirebase from './../../hooks/useFirebase';
 import { useNavigate} from 'react-router-dom';
 import {FcGoogle} from 'react-icons/fc';
 
 const Login = () => {
+    const [error, setError] = useState('')
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const { loginUser } = useFirebase();
@@ -16,7 +17,7 @@ const Login = () => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        loginUser(email, password);
+        loginUser(email, password, setError);
 
     }
 
@@ -31,15 +32,18 @@ const Login = () => {
                         <div className="form__group">
                             <div className="input__group">
                                 <label htmlFor="email">Email</label>
-                                <input ref={emailRef} type="email" name="email" id="email" required />
+                                <input ref={emailRef} type="email" name="email" id="email" required placeholder="Enter Email" />
                             </div>
                             <div className="input__group">
                                 <label htmlFor="password">Password</label>
-                                <input ref={passwordRef} type="password" name="password" id="password" required />
+                                <input ref={passwordRef} type="password" name="password" id="password" required placeholder="Enter Password" />
                             </div>
                             <div className="form__text">
                                 <p>New Here?</p>
                                 <button onClick={() => navigate('/register')}>Register</button>
+                            </div>
+                            <div className="form__error">
+                                <p>{error.slice(10, 37)}</p>
                             </div>
                             <div className="form__submit__btn">
                                 <input type="submit" value="Login" />

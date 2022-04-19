@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signOut, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile, signOut, GoogleAuthProvider, signInWithPopup, sendEmailVerification } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import auth from '../firebase.init';
@@ -19,7 +19,7 @@ const useFirebase = () => {
 
 
     //? Create new user with Email and Password
-    const createUser = (name, img, email, password) => {
+    const createUser = (name, img, email, password, toast) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(userCredential => {
                 const user = userCredential.user;
@@ -28,6 +28,10 @@ const useFirebase = () => {
                     displayName: `${name}`,
                     photoURL: `${img}`
                 })
+                sendEmailVerification(auth.currentUser)
+                    .then(() => {
+                        toast('Varification Mail Send')
+                    })
                 navigate(from, { replace: true });
             })
     }
@@ -43,12 +47,15 @@ const useFirebase = () => {
     }
 
     //? Login user with Email and Password
-    const loginUser = (email, password) => {
+    const loginUser = (email, password, setError) => {
         signInWithEmailAndPassword(auth, email, password)
             .then(userCredential => {
                 const user = userCredential.user;
                 setUser(user);
                 navigate(from, { replace: true });
+            })
+            .catch(error => {
+                setError(error.message);
             })
     }
 
@@ -62,7 +69,7 @@ const useFirebase = () => {
         signinUserGoogle,
         loginUser,
         handleSignOut,
-        user
+        user,
     }
 }
 
