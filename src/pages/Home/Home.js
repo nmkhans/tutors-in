@@ -35,7 +35,7 @@ const Home = () => {
                                         <h4>Online Coaching</h4>
                                     </div>
                                     <div className="package__desc">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna</p>
+                                        <p>Online coaching for your guidence and imporvement on study. very effective and in a innovative way of learning.</p>
                                     </div>
                                     <div className="package__button">
                                         <button>Read More</button>
@@ -49,7 +49,7 @@ const Home = () => {
                                         <h4>Persolanized Learning</h4>
                                     </div>
                                     <div className="package__desc">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna</p>
+                                        <p>Personalized learning programme for you. Its very effective for your study and for personal study management. Personal online classes.</p>
                                     </div>
                                     <div className="package__button">
                                         <button>Read More</button>
@@ -63,7 +63,7 @@ const Home = () => {
                                         <h4>Study Guidence</h4>
                                     </div>
                                     <div className="package__desc">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci didunt ut labore et dolore magna</p>
+                                        <p>Guidence of study to imporve and bring out a better result. Tricks and hacks for better study management. very effective way.</p>
                                     </div>
                                     <div className="package__button">
                                         <button>Read More</button>
