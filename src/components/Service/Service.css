@@ -32,6 +32,7 @@
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .service__title h2 {

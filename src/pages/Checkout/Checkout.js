@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useService } from '../../hooks/useData';
 import { AiFillStar } from 'react-icons/ai';
 import { FaUser } from 'react-icons/fa';
@@ -8,8 +8,9 @@ import './Checkout.css';
 const Checkout = () => {
     const { serviceId } = useParams();
     const { services } = useService();
+    const navigate = useNavigate();
     const service = services.find(service => service.id === +serviceId);
-    console.log(service)
+
     return (
         <div className="Checkout">
             <div className="inner__checkout container">
@@ -36,7 +37,7 @@ const Checkout = () => {
                                 <textarea name="address" id="address"></textarea>
                             </div>
                             <div className="checkout__submit">
-                                <button>Submit</button>
+                                <button onClick={() => navigate('/thankyou')}>Submit</button>
                             </div>
                         </form>
                     </div>

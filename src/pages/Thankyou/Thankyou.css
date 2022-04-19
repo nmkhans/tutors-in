@@ -1,0 +1,17 @@
+.Thankyou {
+    padding: 145px 0;
+}
+
+.thankyou__content {
+    text-align: center;
+}
+
+.thankyou__content h2 {
+    font-size: 80px;
+    color: #21a7d0;
+}
+
+.thankyou__content p {
+    font-size: 30px;
+    color: #111;
+}

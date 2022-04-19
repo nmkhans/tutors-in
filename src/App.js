@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound/NotFound';
 import Blog from './pages/Blog/Blog';
 import About from './pages/About/About';
 import Footer from './components/Footer/Footer';
+import Thankyou from './pages/Thankyou/Thankyou';
 
 function App() {
   const location = useLocation();
@@ -36,6 +37,7 @@ function App() {
         </RequireAuth>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/thankyou" element={<Thankyou />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {checkLocation && (
