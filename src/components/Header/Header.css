@@ -82,3 +82,32 @@
     background: none;
     cursor: pointer;
 }
+
+/* ================= Responsive ==================== */
+
+/* Tabler Device */
+@media all and (min-width: 200px) and (max-width:991px) {
+
+}
+
+/* Small Tablet Device */
+@media all and (min-width: 200px) and (max-width: 768px) {
+    .header__content {
+        flex-direction: column;
+    }
+
+    .header__logo {
+        margin-bottom: 10px;
+    }
+
+    .header__nav {
+        margin-bottom: 10px;
+    }
+}
+
+/* Large Phone */
+@media all and (min-width: 200px) and (max-width:420px) {
+    .header__nav ul li a {
+        padding: 0 10px;
+    }
+}
